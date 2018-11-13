@@ -3,7 +3,7 @@
  curl --header "Content-Type: application/json" \
             --request POST \
             --data '{"text":"hello 2 times  "}' \
-            localhost:3000
+            https://text-analyzing.herokuapp.com/
             
 And the response should be:
 {
