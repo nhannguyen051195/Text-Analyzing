@@ -3,7 +3,7 @@
  curl --header "Content-Type: application/json" \
             --request POST \
             --data '{"text":"hello 2 times  "}' \
-            https://mysuperawesomeapi.com/analyze
+            localhost:3000
             
 And the response should be:
 {
