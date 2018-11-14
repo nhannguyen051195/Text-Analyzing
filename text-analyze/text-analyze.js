@@ -10,14 +10,15 @@ router.get('/', (req, res, next) => {
 
 router.post('/', (req, res, next) => {
     const text = req.body.text
-    var result = {
+    /* var result = {
         "textLength": { "withSpaces": text.length, "withoutSpaces": withoutSpaceCount(text) },
         "wordCount": countWords(text),
         "characterCount": count(text)
-    }
-    console.log(result.characterCount);
+    } */
     res.status(200).json({
-        result
+        "textLength": { "withSpaces": text.length, "withoutSpaces": withoutSpaceCount(text) },
+        "wordCount": countWords(text),
+        "characterCount": count(text)
     })
 });
 module.exports = router;
