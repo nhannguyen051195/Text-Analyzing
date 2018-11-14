@@ -10,11 +10,14 @@ function countWords(str) {
         .length;
 }
 function count(str) {
-    var a = str.toLowerCase()
+    if(str==="")
+    return [];
+    else
+    {var a = str.toLowerCase()
     var patt1 = /[A-Za-z]/gi;
     var result = a.match(patt1).sort();
     var n = result.reduce((prev, curr) => (prev[curr] = ++prev[curr] || 1, prev), {});
-    return Object.entries(n).map(([k, v]) => ({ [k]: v }));
+    return Object.entries(n).map(([k, v]) => ({ [k]: v }));}
 }
 module.exports = {
     spaceCount,
